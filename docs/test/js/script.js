@@ -38,7 +38,3 @@ $(function(){
 		$('#menuBtn').removeClass('close');
 	});
 });
-
-$("#link1").on('click', function () {
-	$('#box').load('q.html');
-});
