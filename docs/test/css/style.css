@@ -208,7 +208,7 @@ section h2 span {
 	
 	#sidebar{
 		width: 12%;
-		position: fixed;
+		position: absolute;
 		top: 0;
 		right: 4%;
 		background: #fff;
@@ -301,7 +301,7 @@ section h2 span {
 
 @media only screen and (max-width: 799px){
 	#sidebar{
-		position: fixed;
+		position: absolute;
 		width: 100%;
 		z-index:500;
 	}
