@@ -230,6 +230,10 @@ section h2 span {
 		font-size: 14px;
 		padding: 10px 0;
 	}
+
+	#topMargin {
+		height: 0px;
+	}
 	
 	#sns{
 		margin-top: 50px;
@@ -322,6 +326,10 @@ section h2 span {
 	#sidebar h1 img{
 		width: auto !important;
 		max-height: 25px;
+	}
+
+	#topMargin {
+		height: 60px;
 	}
 	
   a#menu{
