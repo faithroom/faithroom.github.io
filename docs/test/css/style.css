@@ -91,7 +91,7 @@ section h2 span {
 }
 
 .innerS{
-	width: 60%;
+	width: 80%;
 	margin: 0 auto;
 	padding-bottom: 80px;
 }
@@ -228,7 +228,7 @@ section h2 span {
 
 	#mainnav li{
 		font-size: 14px;
-		padding: 10px 0;
+		padding: 5px 0;
 	}
 
 	#topMargin {
@@ -416,7 +416,7 @@ section h2 span {
 	#mainnav li a{
 		position: relative;
 		display: block;
-		padding: 15px 25px;
+		padding: 10px 25px;
 		border-bottom: 1px solid #ccc;
 		color: #000;
 		font-weight: 400;
