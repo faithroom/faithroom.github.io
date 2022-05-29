@@ -24,13 +24,13 @@ $(function(){
 	});
 });
 
-function closeMenu() {
+function selectMenu() {
 	var	winW = $(window).width();
-	$('#debug').text(""+winW);
 	if (winW < 800) {
 		$('#menuWrap').next().slideToggle();
 		$('#menuBtn').removeClass('close');
 	}
+	window.scroll({top: 0, behavior: 'smooth'});
 }
 
 function adjustFrame() {
