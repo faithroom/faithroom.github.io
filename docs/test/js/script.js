@@ -26,6 +26,7 @@ $(function(){
 
 function closeMenu() {
 	var	winW = $(window).width();
+	$('#debug').text(""+winW);
 	if (winW < 800) {
 		$('#menuWrap').next().slideToggle();
 		$('#menuBtn').removeClass('close');
