@@ -94,10 +94,9 @@ section h2 span {
 		font-size:14px;
 	}
 
-#contents {
-	width: 100%;
-}
-
+	#contents {
+		width: 100%;
+	}
 	
 	#wrapper{
 		width: 100%;
@@ -229,6 +228,10 @@ section h2 span {
 		height: 60px;
 	}
 	
+	#contents {
+		width: 100%;
+	}
+
   a#menu{
   	display: inline-block;
   	position: relative;
@@ -238,7 +241,7 @@ section h2 span {
 	}
 
 	#menuBtn{
-  	display: block;
+  	display: black;
   	position: absolute;
   	top: 50%;
   	left: 50%;
@@ -246,7 +249,7 @@ section h2 span {
   	height: 2px;
   	margin: -1px 0 0 -7px;
   	background: #000;
-  	transition: .2s;
+  	transition: .1s;
 	}
 
 	#menuBtn:before, #menuBtn:after{

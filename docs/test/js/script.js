@@ -13,6 +13,7 @@ $(function(){
 	}
 
 	$('.panel').hide();
+
 	$('#menuWrap').toggle(function(){
 		$(this).next().slideToggle();
 		$('#menuBtn').toggleClass('close');
@@ -22,6 +23,14 @@ $(function(){
 		$('#menuBtn').removeClass('close');
 	});
 });
+
+function closeMenu() {
+	var	winW = $(window).width();
+	if (winW < 800) {
+		$('#menuWrap').next().slideToggle();
+		$('#menuBtn').removeClass('close');
+	}
+}
 
 function adjustFrame() {
   contents = document.getElementById("contents");
