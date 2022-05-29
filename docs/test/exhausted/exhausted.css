@@ -1,0 +1,96 @@
+
+/********************** Body *******************/
+body::before {
+  background-color: #000000;
+  background:url('bg_desert.jpg') repeat left top;
+  background-size: 100% auto;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 108px;
+  content: "";
+  z-index: -1;
+}
+
+body {
+  font-family:'メイリオ','Meiryo UI',Verdana,'ＭＳ Ｐゴシック',sans-serif;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+
+table {
+	border-collapse: separate;
+	border-spacing: 0px;
+}
+
+
+a img {
+    border-style:none;
+}
+
+
+.caption {
+	border: 2px #505050 solid;
+	background-color: #d0e0f0;
+	width: 240px;
+
+    line-height: 100%;
+    font-size: 14px;
+	color: #000010;
+	vertical-align: top;
+	padding: 6px;
+	padding-top: 8px;
+}
+
+
+.caption-title {
+	horizontal-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	padding-bottom: 4px;
+}
+
+
+.caption a:link    { color: #0000aa; }
+.caption a:visited { color: #000088; }
+.caption a:active  { color: #ee2244; }
+.caption a:hover   { color: #704030; background-color: #ffd0c0}
+
+
+.v-spacer {
+	height: 32px;
+}
+
+.v-photo-spacer {
+	height: 48px;
+}
+
+
+.main-photo {
+	border: 2px #fffff0 solid;
+	padding:0px;
+    border-collapse:collapse;
+    border-spacing:0px;
+	background-color: #605040;
+	color: #000000;
+}
+
+.main-photo td {
+    padding:1px;
+}
+
+.main-divider {
+	height: 20px;
+}
+
+.left {
+	aligh:left;
+}
+.right {
+	aligh:right;
+}
+

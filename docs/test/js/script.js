@@ -22,3 +22,9 @@ $(function(){
 		$('#menuBtn').removeClass('close');
 	});
 });
+
+function adjustFrame() {
+  contents = document.getElementById("contents");
+//  contents.style.width = contents.contentWindow.document.body.scrollWidth + "px";
+  contents.style.height = contents.contentWindow.document.body.scrollHeight + "px";
+}

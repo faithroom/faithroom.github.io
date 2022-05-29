@@ -14,11 +14,13 @@
 
 		<div id="sidebar">
 			<div id="sidebarWrap">
-				<h1><img src="image/logo.png" width="87" height="25" alt="logo"></h1>
+				<h1><img src="image/logo.png" width="120" height="25" alt="logo"></h1>
 				<nav id="mainnav">
 					<p id="menuWrap"><a id="menu"><span id="menuBtn"></span></a></p>
 					<div class="panel">
 						<ul>
+							<b>海外</b><p>
+
 							<li><a href="javascript:void(0);" onclick="$('#box').load('25_usa/index.html');">2019 アメリカ</a></li>
 							<li><a href="javascript:void(0);" onclick="$('#box').load('24_india/index.html');">2019 インド</a></li>
 							<li><a href="javascript:void(0);" onclick="$('#box').load('23_baltic/index.html');">2018 フィンランド・エストニア・ラトビア・リトアニア</a></li>
@@ -46,7 +48,7 @@
 							<li><a href="javascript:void(0);" onclick="$('#box').load('01_scot/index.html');">2000 イギリス・スコットランド</a></li>
 							<li><a href="javascript:void(0);" onclick="$('#box').load('00_euro/index.html');">1998 イタリア・スペイン・フランス</a></li>
 
-							◆国内<p>
+							<b>国内</b><p>
 							
 							<li><a href="javascript:void(0);" onclick="$('#box').load('j11_8/index.html');">2021 八丈島</a></li>
 							<li><a href="javascript:void(0);" onclick="$('#box').load('j10_kyoto/index.html');">2020 京都</a></li>
@@ -59,12 +61,11 @@
 							<li><a href="javascript:void(0);" onclick="$('#box').load('j03_okuoi/index.html');">2013 奥大井</a></li>
 							<li><a href="javascript:void(0);" onclick="$('#box').load('j02_yakushima/index.html');">2010 屋久島</a></li>
 							<li><a href="javascript:void(0);" onclick="$('#box').load('j01_8/index.html');">2009 八丈島</a></li>
-							<li><a href="javascript:void(0);" onclick="$('#box').load('j00_fuji/index.html');">2006 富士山</a></li>
+							<li><a href="j00_fuji/index.html" target="contents_frame">2006 富士山</a></li>
 
-							◆余興<p>
+							<b>特集</b><p>
 
-							<li><a href="javascript:void(0);" onclick="$('#box').load('exhausted/index.html');">世界の行き倒れ</a></li>
-
+							<li><a href="exhausted/index.html" target="contents_frame">世界の行き倒れ</a></li>
 
 						</ul>
 					</div>
@@ -74,38 +75,11 @@
 
 		<div id="topMargin"></div>
 		<div id="content">
-			<!-- <p id="mainImg"><img src="image/mainImg.jpg" alt=""></p> -->
 			<p id="mainImg"><img src="image/title_sea.jpg" alt=""></p>
+
 			<section id="sec01">
-				<header>
-					<h2><span>MEMORY</span></h2>
-				</header>
-				<div class="innerS" id="box">
-
-				<center>
-				<table cellpadding=0>
-					<tr class="main-title">
-						<td align=center valign=middle height=72><img src="image/boy_b_t.png">
-						</td>
-					</tr>
-
-					<tr><td>
-						<table class="main-block">
-						<tr><td class="main-block-body">
-
-						学生時代から20年以上続けている海外旅行の記録です。<p>
-
-						ツアー旅行より自由で、バックパッカーほど逞しくない、小心者の無難な旅。<p>
-
-						写真だけでも覗いていってください。
-
-						</td></tr>
-						</table>
-					</td></tr>
-					<tr><td colspan=2 height=20></td></tr>
-				</table>
-				</center>
-
+				<div class="inner" id="box">
+					<iframe id="contents" name="contents_frame" src="exhausted/index.html" onload="adjustFrame()"></iframe>
 				</div>
 			</section>
 		</div>

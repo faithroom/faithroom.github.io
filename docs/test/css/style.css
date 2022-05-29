@@ -69,7 +69,7 @@ section{
 
 section h2{
 	width: 60%;
-	margin: 70px auto;
+	margin: 20px auto;
 	font-size: 22px;
 	font-weight:normal;
 	text-align: center;
@@ -80,115 +80,11 @@ section h2 span {
 	border-bottom: 3px solid #000;
 }
 
-.inner{
-	width: 80%;
-	margin: 0 auto;
-	padding-bottom: 50px;
-}
-
-#sec03 .inner, #sec04 .inner{
-	border-bottom: 1px solid #a0a0a0;
-}
-
-.innerS{
-	width: 80%;
+.inner {
+	width: 98%;
 	margin: 0 auto;
 	padding-bottom: 80px;
 }
-
-
-/* SEC02 Gallery
-------------------------------------------------------------*/
-#sec02{
-	padding: 0 !important;
-}
-
-#sec02 header{
-	display: none;
-}
-
-#gallery{
-	overflow: hidden;
-}
-
-#gallery li{
-	float: left;
-	width: calc(100%/3);
-	line-height: 0;
-}
-#gallery li.full{
-	width: 100%;
-}
-
-
-#gallery img{
-	display: block;
-	width: 100%;
-	height: auto;
-}
-
-
-/* SEC03 BRAND
-------------------------------------------------------------*/
-.col4 .img{
-	margin: 0 auto;
-}
-
-
-
-/* SEC04 PROJECT
-------------------------------------------------------------*/
-#sec04{
-	padding-bottom: 0 !important;
-}
-
-.article{
-	clear: both;
-	overflow: hidden;
-	padding-bottom: 50px;
-}
-
-.article img{
-	float: left;
-	margin: 5px 20px 20px;
-}
-
-.article p{
-	margin-bottom: 20px;
-}
-
-
-
-/* SEC05 COMPANY
-------------------------------------------------------------*/
-#sec05 p{
-	margin-bottom: 5px;
-}
-
-.col2 li{
-	display: inline-block;
-	width: 100%;
-  margin: 20px 0;
-}
-
-#map{
-	position: relative;
-	padding-bottom: 75%;
-	height: 0;
-	overflow: hidden;
-	z-index: 0;
-}
-
-#map iframe{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100% !important;
-	height: 100% !important;
-	border: 0;
-}
-
-
 
 /* RESPONSIVE 設定
 ------------------------------------------------------------*/
@@ -197,6 +93,11 @@ section h2 span {
 	body{
 		font-size:14px;
 	}
+
+#contents {
+	width: 100%;
+}
+
 	
 	#wrapper{
 		width: 100%;
@@ -207,13 +108,13 @@ section h2 span {
 	}
 	
 	#sidebar{
-		width: 12%;
+		width: 18%;
 		position: absolute;
 		top: 0;
-		right: 4%;
+		right: 1%;
 		background: #fff;
 	}
-	
+
   a#menu{
 		display:none;
 	}	
@@ -227,7 +128,7 @@ section h2 span {
 	}
 
 	#mainnav li{
-		font-size: 14px;
+		font-size: 12px;
 		padding: 5px 0;
 	}
 
@@ -261,10 +162,6 @@ section h2 span {
 		vertical-align: top;
 		text-align: left;
 	}
-	
-	#map iframe{
-		height: 200px !important;
-  }
 	
   #footer{
 		padding: 30px 10px 70px 0;
