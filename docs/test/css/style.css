@@ -135,19 +135,6 @@ section h2 span {
 		height: 0px;
 	}
 	
-	#sns{
-		margin-top: 50px;
-	}
-	
-	#sns li{
-		display: inline-block;
-		padding-right: 10px;
-	}
-
-	#sns a:hover img{
-		opacity: .8;
-	}
-	
 	/* SEC03 BRAND
 	-----------------*/
 	.col4{
@@ -162,9 +149,10 @@ section h2 span {
 		text-align: left;
 	}
 	
-  #footer{
+    #footer{
 		padding: 30px 10px 70px 0;
 	}
+
 }
 
 
@@ -334,23 +322,6 @@ section h2 span {
 		border-right: solid 2px #000;
 		-webkit-transform: rotate(45deg);
 		transform: rotate(45deg);
-	}
-	#mainnav #sns li{
-		display: inline-block;
-	}
-	#mainnav #sns li a{
-		position: relative;
-		display: inline-block;
-		padding: 15px 10px 0;
-		border: 0;
-	}
-	#mainnav #sns li a:before{
-		border: 0;
-	}
-	.col4 li{
-		margin: 0 auto 50px;
-		display: block;
-		text-align: center;
 	}
 	section h2{
 		margin: 55px auto;

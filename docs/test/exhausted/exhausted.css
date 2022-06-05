@@ -94,3 +94,6 @@ a img {
 	aligh:right;
 }
 
+.photo img {
+	width: 160px;
+}
