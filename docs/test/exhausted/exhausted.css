@@ -94,6 +94,14 @@ a img {
 	aligh:right;
 }
 
+@media only screen and (max-width: 599px){
+.photo {
+	width: 240px;
+}
 .photo img {
-	width: 160px;
+	width: 240px;
+}
+.v-spacer {
+	height: 20px;
+}
 }
