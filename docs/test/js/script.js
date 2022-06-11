@@ -35,5 +35,5 @@ function selectMenu() {
 
 function adjustFrame() {
   contents = document.getElementById("contents");
-  contents.style.height = contents.contentWindow.document.body.scrollHeight + 20 + "px";
+  contents.style.height = contents.contentWindow.document.body.scrollHeight + "px";
 }

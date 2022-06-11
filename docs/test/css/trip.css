@@ -111,6 +111,20 @@ a img {
     padding:5px;
 }
 
+.main-photo2 {
+	border: 2px #808080 solid;
+	padding:5px;
+    border-collapse:collapse;
+    border-spacing:10;
+	background-color: #f8f0ff;
+	color: #000000;
+}
+
+.main-photo2 td {
+	border: 2px solid #555555;
+    padding:5px;
+}
+
 .main-divider {
 	height: 10px;
 }
@@ -134,7 +148,7 @@ a img {
 	padding-left: 2px;
 	padding-right: 2px;
 
-	width: 96%;
+	width: 98%;
 }
 
 .main-photo {
@@ -142,9 +156,23 @@ a img {
 	padding:0px;
     border-collapse:collapse;
     border-spacing:0;
-/*	width: 40%;
-*/}
-.main-photo img {
-	width: 180px;
+	width: 48%;
 }
+
+.main-photo img {
+	width: 100%;
+}
+
+.main-photo2 {
+	border: 0px #808080 solid;
+	padding:0px;
+    border-collapse:collapse;
+    border-spacing:0;
+    width: 96%;
+}
+
+.main-photo2 img {
+	width: 100%;
+}
+
 }
