@@ -128,10 +128,23 @@ a img {
 
 
 @media only screen and (max-width: 599px){
-.main-photo {
-	width: 240px;
+.main-block {
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+
+	width: 96%;
 }
+
+.main-photo {
+	border: 0px #808080 solid;
+	padding:0px;
+    border-collapse:collapse;
+    border-spacing:0;
+/*	width: 40%;
+*/}
 .main-photo img {
-	width: 240px;
+	width: 180px;
 }
 }
