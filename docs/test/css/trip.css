@@ -1,0 +1,137 @@
+
+/********************** Body *******************/
+body {
+	background-color: #ffffff;
+	background-image: url(../image/wall.jpg);
+	font-family:'メイリオ','Meiryo UI',Verdana,'ＭＳ Ｐゴシック',sans-serif;
+	text-decoration: none;
+}
+
+table {
+	border-collapse: separate;
+	border-spacing: 1px;
+}
+
+
+a img {
+    border-style:none;
+}
+
+
+/********************** border *******************/
+
+.border {
+	border-collapse: collapse;
+	border-spacing: 0px;
+
+	width: 24px;
+	height: 100%;
+    background-image: url(image/separator.png);	
+}
+
+
+/********************** Main *******************/
+
+.main {
+	border: 1px #505090 solid;
+	background-color: #f8f8f0;
+	background-image: url(image/main-bg.jpg);
+
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 6px;
+	padding-right: 6px;
+
+	width: 612px;
+    line-height: 150%;
+    font-size: 14px;
+	color: #000000;
+}
+
+.main-title {
+    line-height: 150%;
+    font-size: 24px;
+	color: #000020;
+}
+
+
+
+.main-block {
+	background-color: #f8f8ff;
+	border: 2px #808090 solid;
+
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+
+	width: 600px;
+	color: #000000;
+}
+
+.main-block  a:link    { color: #0000aa; }
+.main-block  a:visited { color: #000088; }
+.main-block  a:active  { color: #ee2244; }
+.main-block  a:hover   { color: #704030; background-color: #ff9060}
+
+.main-block-head {
+	border: 1px #505090 solid;
+	background-color: #304060;
+    width: 100%;
+    height: 32px;
+	padding-left:10px;
+
+    line-height: 100%;
+    font-size: 16px;
+	color: #ffffff;
+}
+
+.main-block-body {
+	border: 0px #505090 solid;
+	background-color: #f8f8ff;
+	padding:10px;
+
+    width: 100%;
+    line-height: 140%;
+    font-size: 14px;
+	color: #000000;
+}
+
+.main-photo {
+	border: 2px #808080 solid;
+	padding:5px;
+    border-collapse:collapse;
+    border-spacing:10;
+	background-color: #f8f0ff;
+	color: #000000;
+}
+
+.main-photo td {
+	border: 2px solid #555555;
+    padding:5px;
+}
+
+.main-divider {
+	height: 10px;
+}
+
+.comment {
+	border: 1px #505090 solid;
+	background-color: #ffffff;
+	padding:10px;
+
+    width: 100%;
+    line-height: 140%;
+    font-size: 14px;
+	color: #000000;
+}
+
+
+@media only screen and (max-width: 599px){
+.main-photo {
+	width: 240px;
+}
+.main-photo img {
+	width: 240px;
+}
+}
