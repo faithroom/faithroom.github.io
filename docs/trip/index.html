@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>My trip</title>
+	<link rel="stylesheet" media="all" href="css/style.css">
+	<script src="js/jquery-1.8.0.min.js"></script>
+	<script src="js/script.js"></script>
+</head>
+
+<body id="top">
+	<div id="wrapper">
+
+		<div id="sidebar">
+			<div id="sidebarWrap">
+				<div id="debug"></div>
+				<h1>
+					<a href="top.html" target="contents_frame" onclick="selectMenu();">
+					<img src="image/logo.png" width="120" height="25" alt="logo"></a>
+				</h1>
+				<nav id="mainnav">
+					<p id="menuWrap"><a id="menu"><span id="menuBtn"></span></a></p>
+					<div class="panel">
+						<ul>
+							<b>海外</b><p>
+
+							<li>(復旧中) 2019 アメリカ</a></li>
+							<li>(復旧中) 2019 インド</a></li>
+							<li>(復旧中) 2018 フィンランド・エストニア・ラトビア・リトアニア</a></li>
+							<li>(復旧中) 2017 イタリア</a></li>
+							<li>(復旧中) 2016 インドネシア</a></li>
+							<li>(復旧中) 2015 ルーマニア・チェコ・ドイツ</a></li>
+							<li>(復旧中) 2014 イスラエル・ドイツ・オランダ</a></li>
+							<li>(復旧中) 2013 台湾</a></li>
+							<li>(復旧中) 2013 モロッコ・スペイン・ポルトガル</a></li>
+							<li>(復旧中) 2012 ベトナム・カンボジア</a></li>
+							<li>(復旧中) 2011 中国 - 上海</a></li>
+							<li>(復旧中) 2011 台湾</a></li>
+							<li>(復旧中) 2010 スロバキア・ハンガリー</a></li>
+							<li>(復旧中) 2009 トルコ</a></li>
+							<li>(復旧中) 2009 マレーシア</a></li>
+							<li>(復旧中) 2008 中国 - 北京</a></li>
+							<li>(復旧中) 2007 ポーランド・スウェーデン</a></li>
+							<li>(復旧中) 2006 エジプト</a></li>
+							<li>(復旧中) 2006 オランダ・ベルギー・セルビア</a></li>
+							<li>(復旧中) 2006 スペイン</a></li>
+							<li>(復旧中) 2005 スロヴェニア・クロアチア</a></li>
+							<li>(復旧中) 2003 ドイツ・チェコ・スロバキア</a></li>
+							<li>(復旧中) 2003 スペイン - バルセロナ</a></li>
+							<li>(復旧中) 2002 ドイツ・スイス・オーストリア</a></li>
+
+							<li><a href="01_scot/index.html" target="contents_frame" onclick="selectMenu();">2000 イギリス・スコットランド</a></li>
+							<li><a href="00_euro/index.html" target="contents_frame" onclick="selectMenu();">1998 イタリア・スペイン・フランス</a></li>
+
+							<b>国内</b><p>
+							
+							<li>(復旧中) 2021 八丈島</a></li>
+							<li>(復旧中) 2020 京都</a></li>
+							<li>(復旧中) 2019 石垣・西表</a></li>
+							<li>(復旧中) 2018 沖縄</a></li>
+							<li>(復旧中) 2016 九州</a></li>
+							<li>(復旧中) 2016 宮城 キツネ村</a></li>
+							<li>(復旧中) 2015 四国</a></li>
+							<li>(復旧中) 2015 京都</a></li>
+							<li>(復旧中) 2013 奥大井</a></li>
+
+							<li><a href="j02_yakushima/index.html" target="contents_frame" onclick="selectMenu();">2010 屋久島</a></li>
+							<li><a href="j01_8/index.html" target="contents_frame" onclick="selectMenu();">2009 八丈島</a></li>
+							<li><a href="j00_fuji/index.html" target="contents_frame" onclick="selectMenu();">2006 富士山</a></li>
+
+							<b>特集</b><p>
+
+							<li><a href="exhausted/index.html" target="contents_frame" onclick="selectMenu();">世界の行き倒れ</a></li>
+
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+
+		<div id="topMargin"></div>
+		<div id="content">
+			<p id="mainImg"><img src="image/title_sea.jpg" alt=""></p>
+
+			<div class="inner" id="box">
+				<iframe id="contents" name="contents_frame" src="top.html" 
+				frameborder="0" width="100%" marginheight="0" scrolling="no" onload="adjustFrame()"></iframe>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
