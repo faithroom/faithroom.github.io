@@ -24,6 +24,19 @@ $(function(){
 	});
 });
 
+function getUrlQueries() {
+	var queryStr = window.location.search.slice(1);
+	queries = {};
+
+	if (queryStr) {
+		queryStr.split('&').forEach(function(queryStr) {
+			var queryArr = queryStr.split('=');
+			queries[queryArr[0]] = queryArr[1];
+		});
+	}
+	return queries;
+}
+
 function selectMenu() {
 	var	winW = $(window).width();
 	if (winW < 800) {
@@ -36,4 +49,5 @@ function selectMenu() {
 function adjustFrame() {
   contents = document.getElementById("contents");
   contents.style.height = contents.contentWindow.document.body.scrollHeight + "px";
+  console.log(getUrlQueries());
 }
