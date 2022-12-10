@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>KML mission</name>
+    <Placemark>
+      <LineString>
+        <altitudeMode>relativeToGround</altitudeMode>
+        <coordinates>
+        {$coordinates}
+        </coordinates>
+      </LineString>
+      <ExtendedData xmlns:airpeak="https://base.airpeak.sony.com/trajectories">
+        <airpeak:timestamps>{$timestamp}</airpeak:timestamps>
+        <airpeak:durationSec>{$duration}</airpeak:durationSec>
+        <airpeak:onComplete>RTH</airpeak:onComplete>
+      </ExtendedData>
+    </Placemark>
+    <Folder>
+      <Placemark>
+        <ExtendedData xmlns:airpeak="https://base.airpeak.sony.com/trajectories">
+          <airpeak:timestamp>0</airpeak:timestamp>
+          <airpeak:headingRotation>0</airpeak:headingRotation>
+        </ExtendedData>
+        <Camera>
+          <heading>225</heading>
+          <tilt>90</tilt>
+          <roll>0</roll>
+        </Camera>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

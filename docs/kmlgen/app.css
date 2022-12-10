@@ -1,0 +1,48 @@
+
+html {
+	height:100%;
+	width:100%;
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	height:100%;
+	width:100%;
+	padding: 0px;
+	margin: 0px;
+
+	background-color: #000000;
+	color: #f0f0f0;
+	font-family:'メイリオ','Meiryo UI',Verdana,'ＭＳ Ｐゴシック',sans-serif;
+	text-decoration: none;
+}
+
+
+.fullsize {
+	height: 40%;
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.contents {
+	width: 96%;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.centered {
+	position: fixed;
+	top: 50%;
+	margin-top: -50px;
+	width: 100%;
+	text-align: center;
+
+	color: #f0f0f0;
+	font-family:'メイリオ','Meiryo UI',Verdana,'ＭＳ Ｐゴシック',sans-serif;
+	font-weight: bold;
+	font-size: 200%;
+}
