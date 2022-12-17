@@ -11,7 +11,7 @@ var baseAlt = 35.0;
 var baseYaw = 270;
 var widthMeter = 40;
 var rotation = 90; // [deg]
-var stayTime = 2000;
+var stayTime = 1500;
 var speed = 2.0;
 var speedHigh = 6.0;
 var acc = 0.8;
@@ -403,7 +403,7 @@ function handleLoad() {
         for (var i = 0; i < csvLine.length; i++) {
            var token = csvLine[i].split(',');
            if (token.length == 4) {
-               points.push([parseInt(token[0]), parseInt(token[1]), (token[2]=='TRUE'), (token[3]=='TRUE')]);
+               points.push([parseInt(token[0]), parseInt(token[1]), (token[2]=='true'), (token[3]=='true')]);
            }
         }
     }
