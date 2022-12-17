@@ -6,7 +6,7 @@
       <LineString>
         <altitudeMode>relativeToGround</altitudeMode>
         <coordinates>
-        {$coordinates}
+{$coordinates}
         </coordinates>
       </LineString>
       <ExtendedData xmlns:airpeak="https://base.airpeak.sony.com/trajectories">
@@ -22,7 +22,7 @@
           <airpeak:headingRotation>0</airpeak:headingRotation>
         </ExtendedData>
         <Camera>
-          <heading>225</heading>
+          <heading>{$yaw}</heading>
           <tilt>90</tilt>
           <roll>0</roll>
         </Camera>

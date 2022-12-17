@@ -1,13 +1,14 @@
 ﻿'use strict';
 
-// mission config
+/////////////////// mission config
 // var photoFile = './image/star.png';
 var photoFile = './image/airpeak.png';
 //var baseLon = 139.368214;
 //var baseLat = 35.429960;
 var baseLon = 139.368611;
 var baseLat = 35.430030;
-var height = 35.0;
+var baseAlt = 35.0;
+var baseYaw = 270;
 var widthMeter = 40;
 var rotation = 90; // [deg]
 var stayTime = 2000;
@@ -16,18 +17,18 @@ var speedHigh = 6.0;
 var acc = 0.8;
 var accHigh = 1.2;
 
-// app
+/////////////////// app
 var photoImage;
 var pointer;
 var stage;
 var windowWidth, windowHeight;
 var pointX, pointY;
-var points = []
+var points = []   // x, y, highSpeed, through
 var drawPoint = -1;
 var kmlTemplate;
 var mouseX, mouseY;
 
-// state
+/////////////////// state
 var vel = false;
 var through = false;
 var snap = false;
@@ -183,11 +184,10 @@ function drawContents() {
     }
     $('#contents').html(html);
 
-    createKML();
+    generateKML();
 }
 
-
-function createKML() {
+function generateKML() {
     var coordinatesStr = '';
     var timeStr = '';
     var scale_m = widthMeter / windowWidth; // pixel -> meter
@@ -213,18 +213,19 @@ function createKML() {
 
         var lastThrough = (i > 0 && points[i - 1][3]);
         totalTime += getDurationFromDistance(dist, points[i][2], lastThrough, points[i][3]);
-        coordinatesStr += gpos[1] + ',' + gpos[0] + ',' + height + ' \n';
+        coordinatesStr += gpos[1] + ',' + gpos[0] + ',' + baseAlt + ' \n';
         timeStr += totalTime + ' ';
 
         if (!points[i][3]) { // stay a moment
             totalTime += stayTime;
-            coordinatesStr += gpos[1] + ',' + gpos[0] + ',' + height + ' \n';
+            coordinatesStr += gpos[1] + ',' + gpos[0] + ',' + baseAlt + ' \n';
             timeStr += totalTime + ' ';
         }
     }
 
     var contents = kmlTemplate.replace('{$coordinates}', coordinatesStr)
                                 .replace('{$timestamp}', timeStr)
+                                .replace('{$yaw}', baseYaw)
                                 .replace('{$duration}', parseInt((totalTime + 999) / 1000 + 1));
     console.log(contents);
 
@@ -261,6 +262,32 @@ function getDurationFromDistance(dist, highSpeed, lastThrough, through) {
     return parseInt(duration * 1000);
 }
 
+function setMousePoint() {
+    pointX = mouseX;
+    pointY = mouseY;
+
+    if (snap) {
+        for (var i = 0; i < points.length; i++) {
+            if (mouseX - 10 <= points[i][0] && points[i][0] <= mouseX + 10 &&
+                mouseY - 10 <= points[i][1] && points[i][1] <= mouseY + 10) {
+                pointX = points[i][0];
+                pointY = points[i][1];
+                return;
+            }
+        }
+
+        var lastX = points[points.length - 1][0];
+        var lastY = points[points.length - 1][1];
+        if (Math.abs(pointX - lastX) < Math.abs(pointY - lastY)) {
+            pointX = lastX;
+        } else {
+            pointY = lastY;
+        }
+    }
+}
+
+///////////////////////////////////// calc util
+
 function radians(deg) {
     return Math.PI * deg / 180;
 }
@@ -293,30 +320,6 @@ function reproject(x, y) {
     }
 
     return [baseLat, baseLon];
-}
-
-function setMousePoint() {
-    pointX = mouseX;
-    pointY = mouseY;
-
-    if (snap) {
-        for (var i = 0; i < points.length; i++) {
-            if (mouseX - 10 <= points[i][0] && points[i][0] <= mouseX + 10 &&
-                mouseY - 10 <= points[i][1] && points[i][1] <= mouseY + 10) {
-                pointX = points[i][0];
-                pointY = points[i][1];
-                return;
-            }
-        }
-
-        var lastX = points[points.length - 1][0];
-        var lastY = points[points.length - 1][1];
-        if (Math.abs(pointX - lastX) < Math.abs(pointY - lastY)) {
-            pointX = lastX;
-        } else {
-            pointY = lastY;
-        }
-    }
 }
 
 
@@ -375,15 +378,36 @@ function keyup(e) {
     }
 }
 
-function handleDownload() {
-    var content = createKML();
-    var blob = new Blob([ content ], { "type" : "text/plain" });
+function setDownloadContent(fileName, id, content) {
+    var blob = new Blob([content], { "type" : "text/plain" });
+    document.getElementById(id).href = window.URL.createObjectURL(blob);
+}
 
-    if (window.navigator.msSaveBlob) { 
-        window.navigator.msSaveBlob(blob, "out.kml"); 
-        // msSaveOrOpenBlobの場合はファイルを保存せずに開ける
-        window.navigator.msSaveOrOpenBlob(blob, "out.kml"); 
-    } else {
-        document.getElementById("download").href = window.URL.createObjectURL(blob);
+function handleDownload() {
+    setDownloadContent("out.kml", "download", generateKML());
+}
+
+function handleSave() {
+    var csvStr = "";
+    for (var i = 0; i < points.length; i++) {
+        csvStr += points[i][0] + ',' + points[i][1] + ',' + points[i][2] + ',' + points[i][3] + '\n';
     }
+    setDownloadContent("data.csv", "save", csvStr);
+}
+
+function handleLoad() {
+    var reader = new FileReader()
+    reader.onload = function () {
+        points = [];
+        var csvLine = reader.result.split('\n');
+        for (var i = 0; i < csvLine.length; i++) {
+           var token = csvLine[i].split(',');
+           if (token.length == 4) {
+               points.push([parseInt(token[0]), parseInt(token[1]), (token[2]=='TRUE'), (token[3]=='TRUE')]);
+           }
+        }
+    }
+
+    let element = document.getElementById('load');
+    reader.readAsText(element.files[0]);
 }

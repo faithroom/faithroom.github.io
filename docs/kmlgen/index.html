@@ -13,8 +13,11 @@
 
 <body>
     <div id="canvas" class="fullsize"></div>
+    <a id="download" href="#" download="out.kml" onclick="handleDownload()">Download KML</a><p>
+    <a id="save" href="#" download="data.csv" onclick="handleSave()">Save pattern</a><br>
+    <a id="load2" href="#" onclick="handleLoad()">Load pattern</a>
+    <input type="file" id="load"/>
     <div id="contents" class="contents"></div>
-    <a id="download" href="#" download="out.kml" onclick="handleDownload()">ダウンロード</a>
 </body>
 
 <script type="text/javascript" src="lib/jquery-1.10.2.min.js"></script>
