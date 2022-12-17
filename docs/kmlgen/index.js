@@ -2,19 +2,30 @@
 
 /////////////////// mission config
 // var photoFile = './image/star.png';
-var photoFile = './image/airpeak.png';
-//var baseLon = 139.368214;
-//var baseLat = 35.429960;
-var baseLon = 139.368611;
+// var photoFile = './image/airpeak.png';
+var photoFile = './image/christmas.jpg';
+
+//org
+// var baseLon = 139.368611;
+// var baseLat = 35.430030;
+
+//middle
+var baseLon = 139.368391;
 var baseLat = 35.430030;
-var baseAlt = 35.0;
+
+//mountain side
+// var baseLon = 139.368106;
+// var baseLat = 35.429622;
+
+var baseAlt = 25.0;
 var baseYaw = 270;
-var widthMeter = 40;
-var rotation = 90; // [deg]
-var stayTime = 1500;
+var widthMeter = 30;
+var rotationY = 180; // [deg]
+var rotationZ = 90; // [deg]
+var stayTime = 2000;
 var speed = 2.0;
 var speedHigh = 6.0;
-var acc = 0.8;
+var acc = 1.0;
 var accHigh = 1.2;
 
 /////////////////// app
@@ -191,34 +202,44 @@ function generateKML() {
     var coordinatesStr = '';
     var timeStr = '';
     var scale_m = widthMeter / windowWidth; // pixel -> meter
-    var last_x, last_y;
+    var last_x, last_y, last_z;
     var totalTime = 0;
-    var theta = radians(rotation);
+    var thetaY = radians(rotationY);
+    var thetaZ = radians(rotationZ);
 
     for (var i = 0; i < points.length; i++) {
         var x = -points[i][1] * scale_m;
         var y = points[i][0] * scale_m;
-        var tx = Math.cos(theta) * x - Math.sin(theta) * y;
-        var ty = Math.sin(theta) * x + Math.cos(theta) * y;
-        x = tx;
-        y = ty;
+        var z = 0.0;
+
+        var t1 = Math.cos(thetaY) * z - Math.sin(thetaY) * x;
+        var t2 = Math.sin(thetaY) * z + Math.cos(thetaY) * x;
+        z = baseAlt - t1;
+        x = t2;
+console.log("#1  " + x + "  " + y + "  " + z);
+        t1 = Math.cos(thetaZ) * x - Math.sin(thetaZ) * y;
+        t2 = Math.sin(thetaZ) * x + Math.cos(thetaZ) * y;
+        x = t1;
+        y = t2;
+console.log("#2  " + x + "  " + y + "  " + z);
 
         var dist = 0;
         if (i > 0) {
-            dist = Math.sqrt((x - last_x) * (x - last_x) + (y - last_y) * (y - last_y));
+            dist = Math.sqrt((x - last_x) * (x - last_x) + (y - last_y) * (y - last_y) + (z - last_z) * (z - last_z));
         }
         var gpos = reproject(x, y);
         last_x = x;
         last_y = y;
+        last_z = z;
 
         var lastThrough = (i > 0 && points[i - 1][3]);
         totalTime += getDurationFromDistance(dist, points[i][2], lastThrough, points[i][3]);
-        coordinatesStr += gpos[1] + ',' + gpos[0] + ',' + baseAlt + ' \n';
+        coordinatesStr += gpos[1] + ',' + gpos[0] + ',' + z + ' \n';
         timeStr += totalTime + ' ';
 
         if (!points[i][3]) { // stay a moment
             totalTime += stayTime;
-            coordinatesStr += gpos[1] + ',' + gpos[0] + ',' + baseAlt + ' \n';
+            coordinatesStr += gpos[1] + ',' + gpos[0] + ',' + z + ' \n';
             timeStr += totalTime + ' ';
         }
     }
