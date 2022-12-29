@@ -2,30 +2,17 @@
 
 /////////////////// mission config
 // var photoFile = './image/star.png';
-// var photoFile = './image/airpeak.png';
-var photoFile = './image/christmas.jpg';
+var photoFile = './image/airpeak.png';
 
-//org
-// var baseLon = 139.368611;
-// var baseLat = 35.430030;
+var baseLon, baseLat, baseAlt, baseYaw;
+var rotationY, rotationZ;
+var widthMeter = 10;
 
-//middle
-var baseLon = 139.368391;
-var baseLat = 35.430030;
-
-//mountain side
-// var baseLon = 139.368106;
-// var baseLat = 35.429622;
-
-var baseAlt = 25.0;
-var baseYaw = 270;
-var widthMeter = 30;
-var rotationY = 180; // [deg]
-var rotationZ = 90; // [deg]
 var stayTime = 2000;
 var speed = 2.0;
 var speedHigh = 6.0;
-var acc = 1.0;
+//var acc = 1.0;
+var acc = 0.8;
 var accHigh = 1.2;
 
 /////////////////// app
@@ -114,6 +101,7 @@ function initApplication() {
 
             // photoImage
             windowWidth = window.innerWidth;
+            windowWidth = 884;
             windowHeight = window.innerHeight;
             photoImage = PIXI.Sprite.fromImage(photoFile, false);
             photoImage.position = {x:0, y:0};
@@ -198,7 +186,29 @@ function drawContents() {
     generateKML();
 }
 
+function getProperty() {
+    baseLat = document.getElementById('textLat').value;
+    baseLon = document.getElementById('textLon').value;
+    baseAlt = document.getElementById('textAlt').value;
+    baseYaw = document.getElementById('textYaw').value;
+    rotationY = document.getElementById('textRotationY').value;
+    rotationZ = document.getElementById('textRotationZ').value;
+    widthMeter = document.getElementById('textWidthMeter').value;
+
+    console.log(
+        baseLat,
+        baseLon ,
+        baseAlt ,
+        baseYaw ,
+        rotationY,
+        rotationZ,
+        widthMeter
+    );
+}
+
 function generateKML() {
+    getProperty();
+
     var coordinatesStr = '';
     var timeStr = '';
     var scale_m = widthMeter / windowWidth; // pixel -> meter
@@ -216,12 +226,11 @@ function generateKML() {
         var t2 = Math.sin(thetaY) * z + Math.cos(thetaY) * x;
         z = baseAlt - t1;
         x = t2;
-console.log("#1  " + x + "  " + y + "  " + z);
+
         t1 = Math.cos(thetaZ) * x - Math.sin(thetaZ) * y;
         t2 = Math.sin(thetaZ) * x + Math.cos(thetaZ) * y;
         x = t1;
         y = t2;
-console.log("#2  " + x + "  " + y + "  " + z);
 
         var dist = 0;
         if (i > 0) {
@@ -278,7 +287,6 @@ function getDurationFromDistance(dist, highSpeed, lastThrough, through) {
     if (through) {
         duration *= 0.8;
     }
-    console.log("#### ", dist, highSpeed, duration);
 
     return parseInt(duration * 1000);
 }
@@ -383,7 +391,6 @@ function keydown(e) {
         vel = false;
         break;
     }
-    console.log(e.keyCode);
 }
 
 function keyup(e) {
@@ -410,6 +417,11 @@ function handleDownload() {
 
 function handleSave() {
     var csvStr = "";
+
+    // 1行目は property
+    getProperty();
+    csvStr = baseLat + ',' + baseLon + ',' + baseAlt + ',' + baseYaw + ',' + rotationY + ',' + rotationZ + ',' + widthMeter + '\n';
+
     for (var i = 0; i < points.length; i++) {
         csvStr += points[i][0] + ',' + points[i][1] + ',' + points[i][2] + ',' + points[i][3] + '\n';
     }
@@ -421,7 +433,22 @@ function handleLoad() {
     reader.onload = function () {
         points = [];
         var csvLine = reader.result.split('\n');
-        for (var i = 0; i < csvLine.length; i++) {
+
+        // 1行目は property
+        var index = 0;
+        var token = csvLine[index].split(',');
+        if (token.length == 7) {
+            document.getElementById('textLat').value = token[0];
+            document.getElementById('textLon').value = token[1];
+            document.getElementById('textAlt').value = token[2];
+            document.getElementById('textYaw').value = token[3];
+            document.getElementById('textRotationY').value = token[4];
+            document.getElementById('textRotationZ').value = token[5];
+            document.getElementById('textWidthMeter').value = token[6];
+            index++;
+        }
+
+        for (var i = index; i < csvLine.length; i++) {
            var token = csvLine[i].split(',');
            if (token.length == 4) {
                points.push([parseInt(token[0]), parseInt(token[1]), (token[2]=='true'), (token[3]=='true')]);

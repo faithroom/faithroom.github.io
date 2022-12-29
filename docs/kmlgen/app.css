@@ -20,7 +20,7 @@ body {
 
 
 .fullsize {
-	height: 40%;
+	height:60%;
 	width: 100%;
 	padding: 0px;
 	margin: 0px;
@@ -30,7 +30,7 @@ body {
 .contents {
 	width: 96%;
 	padding: 0px;
-	margin: 0px;
+	margin: 20px;
 	overflow: hidden;
 }
 

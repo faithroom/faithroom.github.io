@@ -13,10 +13,25 @@
 
 <body>
     <div id="canvas" class="fullsize"></div>
+
+    <div class="contents">
+    <table>
+        <tr><td>Base lat:</td><td><input type="text" size="15" id="textLat" value="35.430030">[deg]</td></tr>
+        <tr><td>Base lon:</td><td><input type="text" size="15" id="textLon" value="139.368611">[deg]</td></tr>
+        <tr><td>Base alt:</td><td><input type="text" size="5" id="textAlt" value="35">[m]</td></tr>
+        <tr><td>Base Yaw:</td><td><input type="text" size="5" id="textYaw" value="0">[m]</td></tr>
+        <tr><td>Rotation Y:</td><td><input type="text" size="5" id="textRotationY" value="0">[deg]</td></tr>
+        <tr><td>Rotation Z:</td><td><input type="text" size="5" id="textRotationZ" value="90">[deg]</td></tr>
+        <tr><td>Image width:</td><td><input type="text" size="5" id="textWidthMeter" value="40">[m]</td></tr>
+    </table><p>
+
     <a id="download" href="#" download="out.kml" onclick="handleDownload()">Download KML</a><p>
+
     <a id="save" href="#" download="data.csv" onclick="handleSave()">Save pattern</a><br>
     <a id="load2" href="#" onclick="handleLoad()">Load pattern</a>
-    <input type="file" id="load"/>
+    <input type="file" id="load"/><p>
+</div>
+
     <div id="contents" class="contents"></div>
 </body>
 
