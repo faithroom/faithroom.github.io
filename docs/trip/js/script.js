@@ -22,6 +22,14 @@ $(function(){
 		$(this).next().slideToggle();
 		$('#menuBtn').removeClass('close');
 	});
+
+	var query = getUrlQueries();
+	console.log("QUERY ", query);
+	if ("page" in query) {
+		contents.src = query["page"] + "/index.html";
+	} else {
+		contents.src = "top.html";
+	}
 });
 
 function getUrlQueries() {
@@ -49,5 +57,4 @@ function selectMenu() {
 function adjustFrame() {
   contents = document.getElementById("contents");
   contents.style.height = contents.contentWindow.document.body.scrollHeight + "px";
-  console.log(getUrlQueries());
 }
