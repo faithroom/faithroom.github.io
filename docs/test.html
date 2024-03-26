@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>位置情報を取り出すサンプル</title>
+    <script>
+      function geoApi () {
+	  // 現在位置情報を取得
+	  navigator.geolocation.getCurrentPosition(successCallback);
+
+	  // 位置情報取得完了時の処理
+	  function successCallback(position) {
+
+	      const glLatitude = position.coords.latitude;
+	      document.getElementById("resultLatitude").innerHTML = glLatitude;
+
+
+	      const glLongitude = position.coords.longitude;
+	      document.getElementById("resultLongitude").innerHTML = glLongitude;
+
+	      document.getElementById("time").innerHTML = position.timestamp;
+
+	      document.getElementById("speed").innerHTML = position.coords.heading + "   " + position.coords.speed; 
+	  };
+      };
+    </script>
+  </head>
+
+  <body>
+    <h1>Geolocation API</h1>
+
+    <h2>位置情報を取り出すサンプル</h2>
+
+    <p><input type="button" value="位置情報の取得" onclick="geoApi()"></p>
+    <dl>
+      <dt>緯度</dt>
+      <dd id="resultLatitude">-</dd>
+
+      <dt>経度</dt>
+      <dd id="resultLongitude">-</dd>
+
+      <dt>Time</dt>
+      <dd id="time">-</dd>
+
+      <dt>Speed</dt>
+      <dd id="speed">-</dd>
+</dl>
+  </body>
+</html>
