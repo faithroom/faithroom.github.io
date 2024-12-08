@@ -125,6 +125,21 @@ a img {
     padding:5px;
 }
 
+.main-video {
+	border: 2px #808080 solid;
+	padding:5px;
+    border-collapse:collapse;
+    border-spacing:10;
+	background-color: #f8f0ff;
+	color: #000000;
+	width: 98%;
+}
+
+.main-video td {
+	border: 2px solid #555555;
+    padding:5px;
+}
+
 .main-divider {
 	height: 10px;
 }
@@ -175,4 +190,3 @@ a img {
 	width: 100%;
 }
 
-}
