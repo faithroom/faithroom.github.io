@@ -1,10 +1,10 @@
-
 /********************** Body *******************/
 body {
-	background-color: #ffffff;
-	background-image: url(../image/wall.jpg);
-	font-family:'メイリオ','Meiryo UI',Verdana,'ＭＳ Ｐゴシック',sans-serif;
+	background-color: #f5f3f0;
+	background-image: none;
+	font-family: 'Noto Sans JP', 'メイリオ', 'Meiryo UI', Verdana, 'ＭＳ Ｐゴシック', sans-serif;
 	text-decoration: none;
+	color: #2c2c2c;
 }
 
 table {
@@ -14,7 +14,7 @@ table {
 
 
 a img {
-    border-style:none;
+	border-style: none;
 }
 
 
@@ -26,167 +26,214 @@ a img {
 
 	width: 24px;
 	height: 100%;
-    background-image: url(image/separator.png);	
+	background-image: url(image/separator.png);
 }
 
 
 /********************** Main *******************/
 
 .main {
-	border: 1px #505090 solid;
-	background-color: #f8f8f0;
-	background-image: url(image/main-bg.jpg);
+	border: none;
+	background-color: #fff;
+	background-image: none;
+	border-radius: 8px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
 
-	padding-top: 6px;
-	padding-bottom: 6px;
-	padding-left: 6px;
-	padding-right: 6px;
+	padding: 12px;
 
-	width: 612px;
-    line-height: 150%;
-    font-size: 14px;
-	color: #000000;
+	width: 100%;
+	max-width: 900px;
+	line-height: 170%;
+	font-size: 14px;
+	color: #2c2c2c;
 }
 
 .main-title {
-    line-height: 150%;
-    font-size: 20px;
-	color: #000020;
+	line-height: 160%;
+	font-size: 22px;
+	font-weight: 600;
+	color: #1a1a2e;
+	letter-spacing: 0.04em;
 }
 
 
 
 .main-block {
-	background-color: #f8f8ff;
-	border: 2px #808090 solid;
+	background-color: #ffffff;
+	border: none;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+	overflow: hidden;
 
-	padding-top: 2px;
-	padding-bottom: 2px;
-	padding-left: 2px;
-	padding-right: 2px;
+	padding: 0;
 
-	width: 600px;
-	color: #000000;
+	width: 100%;
+	max-width: 880px;
+	color: #2c2c2c;
 }
 
-.main-block  a:link    { color: #0000aa; }
-.main-block  a:visited { color: #000088; }
-.main-block  a:active  { color: #ee2244; }
-.main-block  a:hover   { color: #704030; background-color: #ff9060}
+.main-block a:link {
+	color: #2a6496;
+}
+
+.main-block a:visited {
+	color: #5a4a7a;
+}
+
+.main-block a:active {
+	color: #c0653a;
+}
+
+.main-block a:hover {
+	color: #c0653a;
+	background-color: transparent;
+}
 
 .main-block-head {
-	border: 1px #505090 solid;
-	background-color: #304060;
-    width: 100%;
-    height: 32px;
-	padding-left:10px;
+	border: none;
+	background: linear-gradient(135deg, #1a1a2e 0%, #2d3a4a 100%);
+	width: 100%;
+	height: auto;
+	padding: 10px 16px;
 
-    line-height: 100%;
-    font-size: 16px;
+	line-height: 140%;
+	font-size: 15px;
+	font-weight: 500;
+	letter-spacing: 0.03em;
 	color: #ffffff;
 }
 
 .main-block-body {
-	border: 0px #505090 solid;
-	background-color: #f8f8ff;
-	padding:10px;
+	border: none;
+	background-color: #ffffff;
+	padding: 16px 20px;
 
-    width: 100%;
-    line-height: 140%;
-    font-size: 14px;
-	color: #000000;
+	width: 100%;
+	line-height: 180%;
+	font-size: 14px;
+	color: #2c2c2c;
 }
 
 .main-photo {
-	border: 2px #808080 solid;
-	padding:5px;
-    border-collapse:collapse;
-    border-spacing:10;
-	background-color: #f8f0ff;
-	color: #000000;
+	border: none;
+	padding: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
+	background-color: transparent;
+	color: #2c2c2c;
+	border-radius: 6px;
+	overflow: hidden;
 }
 
 .main-photo td {
-	border: 2px solid #555555;
-    padding:5px;
-}
-
-.main-photo2 {
-	border: 2px #808080 solid;
-	padding:5px;
-    border-collapse:collapse;
-    border-spacing:10;
-	background-color: #f8f0ff;
-	color: #000000;
-}
-
-.main-photo2 td {
-	border: 2px solid #555555;
-    padding:5px;
-}
-
-.main-video {
-	border: 2px #808080 solid;
-	padding:5px;
-    border-collapse:collapse;
-    border-spacing:10;
-	background-color: #f8f0ff;
-	color: #000000;
-	width: 98%;
-}
-
-.main-video td {
-	border: 2px solid #555555;
-    padding:5px;
-}
-
-.main-divider {
-	height: 10px;
-}
-
-.comment {
-	border: 1px #505090 solid;
-	background-color: #ffffff;
-	padding:10px;
-
-    width: 100%;
-    line-height: 140%;
-    font-size: 14px;
-	color: #000000;
-}
-
-
-@media only screen and (max-width: 599px){
-.main-block {
-	padding-top: 2px;
-	padding-bottom: 2px;
-	padding-left: 2px;
-	padding-right: 2px;
-
-	width: 98%;
-}
-
-.main-photo {
-	border: 0px #808080 solid;
-	padding:0px;
-    border-collapse:collapse;
-    border-spacing:0;
-	width: 48%;
+	border: none;
+	padding: 2px 6px;
+	font-size: 11px;
+	color: #555;
 }
 
 .main-photo img {
-	width: 100%;
+	border-radius: 4px;
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-photo img:hover {
+	transform: scale(1.03);
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
 .main-photo2 {
-	border: 0px #808080 solid;
-	padding:0px;
-    border-collapse:collapse;
-    border-spacing:0;
-    width: 96%;
+	border: none;
+	padding: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
+	background-color: transparent;
+	color: #2c2c2c;
+	border-radius: 6px;
+	overflow: hidden;
+}
+
+.main-photo2 td {
+	border: none;
+	padding: 2px 6px;
+	font-size: 11px;
+	color: #555;
 }
 
 .main-photo2 img {
-	width: 100%;
+	border-radius: 4px;
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
+.main-photo2 img:hover {
+	transform: scale(1.03);
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.main-video {
+	border: none;
+	padding: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
+	background-color: transparent;
+	color: #2c2c2c;
+	width: 98%;
+	border-radius: 6px;
+	overflow: hidden;
+}
+
+.main-video td {
+	border: none;
+	padding: 6px;
+}
+
+.main-divider {
+	height: 16px;
+}
+
+.comment {
+	border: none;
+	background-color: #fafaf8;
+	border-radius: 6px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+	padding: 14px 18px;
+
+	width: 100%;
+	line-height: 170%;
+	font-size: 14px;
+	color: #2c2c2c;
+}
+
+
+@media only screen and (max-width: 599px) {
+	.main-block {
+		padding: 0;
+		width: 98%;
+		border-radius: 6px;
+	}
+
+	.main-photo {
+		border: none;
+		padding: 0;
+		border-collapse: collapse;
+		border-spacing: 0;
+		width: 48%;
+	}
+
+	.main-photo img {
+		width: 100%;
+	}
+
+	.main-photo2 {
+		border: none;
+		padding: 0;
+		border-collapse: collapse;
+		border-spacing: 0;
+		width: 96%;
+	}
+
+	.main-photo2 img {
+		width: 100%;
+	}
