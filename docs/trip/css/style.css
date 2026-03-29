@@ -130,6 +130,74 @@ input:focus {
 }
 
 
+/* サイドバー アコーディオン
+------------------------------------------------------------*/
+.nav-section {
+	margin-bottom: 2px;
+}
+
+.nav-label {
+	display: block;
+	font-weight: bold;
+	font-size: 13px;
+	padding: 7px 10px;
+	color: #333;
+	cursor: pointer;
+	user-select: none;
+	background: #eae8e4;
+	border-left: 3px solid #c0653a;
+	border-radius: 2px;
+}
+
+.nav-label-new {
+	color: #d00000;
+	border-left-color: #d00000;
+}
+
+details.nav-section>summary {
+	display: block;
+	font-weight: bold;
+	font-size: 13px;
+	padding: 7px 10px;
+	color: #333;
+	cursor: pointer;
+	user-select: none;
+	list-style: none;
+	background: #eae8e4;
+	border-left: 3px solid #c0653a;
+	border-radius: 2px;
+	transition: background 0.15s ease;
+}
+
+details.nav-section>summary:hover {
+	background: #ddd9d3;
+}
+
+details.nav-section>summary::-webkit-details-marker {
+	display: none;
+}
+
+details.nav-section>summary::after {
+	content: "▸";
+	float: right;
+	font-size: 11px;
+	color: #999;
+	transition: transform 0.2s ease;
+}
+
+details[open].nav-section>summary::after {
+	content: "▾";
+}
+
+details.nav-section>summary::before {
+	display: none;
+}
+
+.nav-section ul {
+	padding: 4px 0 8px 0;
+}
+
+
 /* 共通
 ------------------------------------------------------------*/
 h1,

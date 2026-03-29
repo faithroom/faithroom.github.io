@@ -32,17 +32,16 @@
 				<nav id="mainnav">
 					<p id="menuWrap"><a id="menu"><span id="menuBtn"></span></a></p>
 					<div class="panel">
-						<ul>
-							<b>
-								<font color=#d00000>New</font>
-							</b>
-							<p>
+						<div class="nav-section nav-new">
+							<span class="nav-label nav-label-new">New</span>
+							<ul>
 								<li><a href="?page=j16_shimanami" onclick="selectMenu();">2025 しまなみ100</a></li>
-								&nbsp;
-							<p>
-								<b>海外</b>
-							<p>
+							</ul>
+						</div>
 
+						<details class="nav-section" open>
+							<summary class="nav-label">海外</summary>
+							<ul>
 								<li><a href="?page=28_taiwan" onclick="selectMenu();">2025 台湾</a></li>
 								<li><a href="?page=27_australia" onclick="selectMenu();">2024 オーストラリア</a></li>
 								<li><a href="?page=26_italy" onclick="selectMenu();">2023 南イタリア</a></li>
@@ -73,11 +72,12 @@
 								<li><a href="?page=02_euro" onclick="selectMenu();">2002 ドイツ・スイス・オーストリア</a></li>
 								<li><a href="?page=01_scot" onclick="selectMenu();">2000 イギリス・スコットランド</a></li>
 								<li><a href="?page=00_euro" onclick="selectMenu();">1998 イタリア・スペイン・フランス</a></li>
-							<p>
+							</ul>
+						</details>
 
-								<b>国内</b>
-							<p>
-
+						<details class="nav-section">
+							<summary class="nav-label">国内</summary>
+							<ul>
 								<li><a href="?page=j16_shimanami" onclick="selectMenu();">2025 しまなみ100</a></li>
 								<li><a href="?page=j15_hokkaido" onclick="selectMenu();">2024 北海道</a></li>
 								<li><a href="?page=j14_fuji" onclick="selectMenu();">2023 富士山一周</a></li>
@@ -95,15 +95,17 @@
 								<li><a href="?page=j02_yakushima" onclick="selectMenu();">2010 屋久島</a></li>
 								<li><a href="?page=j01_8" onclick="selectMenu();">2009 八丈島</a></li>
 								<li><a href="?page=j00_fuji" onclick="selectMenu();">2006 富士山</a></li>
+							</ul>
+						</details>
 
-								<b>番外編</b>
-							<p>
-
+						<details class="nav-section">
+							<summary class="nav-label">番外編</summary>
+							<ul>
 								<li><a href="?page=s00_exhausted" onclick="selectMenu();">2019 世界の行き倒れ</a></li>
 								<li><a href="?page=s01_million" onclick="selectMenu();">2023 月間百万歩チャレンジ</a></li>
 								<li><a href="?page=s02_million2" onclick="selectMenu();">2023 月間百万歩チャレンジ2</a></li>
-
-						</ul>
+							</ul>
+						</details>
 					</div>
 				</nav>
 			</div>
