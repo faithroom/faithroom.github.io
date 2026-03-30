@@ -3,18 +3,21 @@
 
 <head>
 	<!-- Google tag (gtag.js) -->
-	<!--	<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCSERTB5QY"></script>
+	<!--
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCSERTB5QY"></script>
 	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-	  gtag('config', 'G-QCSERTB5QY');
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'G-QCSERTB5QY');
 	</script>
--->
+	-->
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<title>My trip</title>
 	<link rel="stylesheet" media="all" href="css/style.css">
+	<link rel="stylesheet" media="all" href="css/trip.css">
 	<script src="js/jquery-1.8.0.min.js"></script>
 	<script src="js/script.js"></script>
 </head>
@@ -26,22 +29,22 @@
 			<div id="sidebarWrap">
 				<div id="debug"></div>
 				<h1>
-					<a href="top.html" target="contents_frame" onclick="selectMenu();">
+					<a href="test.html" onclick="selectMenu();">
 						<img src="image/logo.png" width="120" height="25" alt="logo"></a>
 				</h1>
 				<nav id="mainnav">
 					<p id="menuWrap"><a id="menu"><span id="menuBtn"></span></a></p>
 					<div class="panel">
-						<ul>
-							<b>
-								<font color=#d00000>New</font>
-							</b>
-							<p>
+						<div class="nav-section nav-new">
+							<span class="nav-label nav-label-new">New</span>
+							<ul>
 								<li><a href="?page=j16_shimanami" onclick="selectMenu();">2025 しまなみ100</a></li>
-								&nbsp;
-							<p>
-								<b>海外</b>
-							<p>
+							</ul>
+						</div>
+
+						<div class="nav-section">
+							<span class="nav-label">海外</span>
+							<ul>
 								<li><a href="?page=28_taiwan" onclick="selectMenu();">2025 台湾</a></li>
 								<li><a href="?page=27_australia" onclick="selectMenu();">2024 オーストラリア</a></li>
 								<li><a href="?page=26_italy" onclick="selectMenu();">2023 南イタリア</a></li>
@@ -72,11 +75,12 @@
 								<li><a href="?page=02_euro" onclick="selectMenu();">2002 ドイツ・スイス・オーストリア</a></li>
 								<li><a href="?page=01_scot" onclick="selectMenu();">2000 イギリス・スコットランド</a></li>
 								<li><a href="?page=00_euro" onclick="selectMenu();">1998 イタリア・スペイン・フランス</a></li>
-							<p>
+							</ul>
+						</div>
 
-								<b>国内</b>
-							<p>
-
+						<div class="nav-section">
+							<span class="nav-label">国内</span>
+							<ul>
 								<li><a href="?page=j16_shimanami" onclick="selectMenu();">2025 しまなみ100</a></li>
 								<li><a href="?page=j15_hokkaido" onclick="selectMenu();">2024 北海道</a></li>
 								<li><a href="?page=j14_fuji" onclick="selectMenu();">2023 富士山一周</a></li>
@@ -94,15 +98,17 @@
 								<li><a href="?page=j02_yakushima" onclick="selectMenu();">2010 屋久島</a></li>
 								<li><a href="?page=j01_8" onclick="selectMenu();">2009 八丈島</a></li>
 								<li><a href="?page=j00_fuji" onclick="selectMenu();">2006 富士山</a></li>
+							</ul>
+						</div>
 
-								<b>番外編</b>
-							<p>
-
+						<div class="nav-section">
+							<span class="nav-label">番外編</span>
+							<ul>
 								<li><a href="?page=s00_exhausted" onclick="selectMenu();">2019 世界の行き倒れ</a></li>
 								<li><a href="?page=s01_million" onclick="selectMenu();">2023 月間百万歩チャレンジ</a></li>
 								<li><a href="?page=s02_million2" onclick="selectMenu();">2023 月間百万歩チャレンジ2</a></li>
-
-						</ul>
+							</ul>
+						</div>
 					</div>
 				</nav>
 			</div>
@@ -113,8 +119,7 @@
 			<p id="mainImg"><img src="image/title_sea.jpg" alt=""></p>
 
 			<div class="inner" id="box">
-				<iframe id="contents" name="contents_frame" frameborder="0" width="100%" marginheight="0" scrolling="no"
-					onload="adjustFrame()"></iframe>
+				<div id="contents"></div>
 			</div>
 		</div>
 	</div>
