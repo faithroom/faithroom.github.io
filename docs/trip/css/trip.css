@@ -4,7 +4,7 @@ body {
 	background-image: none;
 	font-family: 'Noto Sans JP', 'メイリオ', 'Meiryo UI', Verdana, 'ＭＳ Ｐゴシック', sans-serif;
 	text-decoration: none;
-	color: #2c2c2c;
+	color: #1c1c1c;
 }
 
 table {
@@ -45,7 +45,7 @@ a img {
 	max-width: 900px;
 	line-height: 170%;
 	font-size: 14px;
-	color: #2c2c2c;
+	color: #1c1c1c;
 }
 
 .main-title {
@@ -68,7 +68,7 @@ a img {
 	font-size: 14px;
 	font-weight: 700;
 	letter-spacing: 0.08em;
-	color: #4b5563;
+	color: #3b5563;
 }
 
 .main-title-place {
@@ -81,7 +81,7 @@ a img {
 	font-size: 15px;
 	font-weight: 500;
 	letter-spacing: 0.03em;
-	color: #5f6470;
+	color: #4f4450;
 }
 
 
@@ -97,7 +97,7 @@ a img {
 
 	width: 100%;
 	max-width: 880px;
-	color: #2c2c2c;
+	color: #1c1c1c;
 }
 
 .main-block a:link {
@@ -139,7 +139,7 @@ a img {
 	width: 100%;
 	line-height: 180%;
 	font-size: 14px;
-	color: #2c2c2c;
+	color: #1c1c1c;
 }
 
 .main-block-body p {
@@ -152,7 +152,7 @@ a img {
 	border-collapse: collapse;
 	border-spacing: 0;
 	background-color: transparent;
-	color: #2c2c2c;
+	color: #1c1c1c;
 	border-radius: 6px;
 	overflow: hidden;
 }
@@ -182,7 +182,7 @@ a img {
 	border-collapse: collapse;
 	border-spacing: 0;
 	background-color: transparent;
-	color: #2c2c2c;
+	color: #1c1c1c;
 	border-radius: 6px;
 	overflow: hidden;
 }
@@ -213,7 +213,7 @@ a img {
 	border-collapse: collapse;
 	border-spacing: 0;
 	background-color: transparent;
-	color: #2c2c2c;
+	color: #1c1c1c;
 	width: 70%;
 	border-radius: 6px;
 	overflow: hidden;
@@ -238,7 +238,7 @@ a img {
 	width: 100%;
 	line-height: 170%;
 	font-size: 14px;
-	color: #2c2c2c;
+	color: #1c1c1c;
 }
 
 
