@@ -250,6 +250,11 @@ section h2 span {
 		padding: 5px 0;
 	}
 
+	#mainnav li a {
+		display: block;
+		padding-left: 10px;
+	}
+
 	#topMargin {
 		height: 0px;
 	}
