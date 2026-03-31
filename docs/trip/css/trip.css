@@ -142,6 +142,10 @@ a img {
 	color: #2c2c2c;
 }
 
+.main-block-body p {
+	margin: 0.8em 0;
+}
+
 .main-photo {
 	border: none;
 	padding: 0;
