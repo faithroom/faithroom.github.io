@@ -193,6 +193,7 @@ a img {
 	font-size: 11px;
 	color: #555;
 	line-height: 130%;
+	vertical-align: top;
 }
 
 .main-photo2 img {
@@ -213,7 +214,7 @@ a img {
 	border-spacing: 0;
 	background-color: transparent;
 	color: #2c2c2c;
-	width: 98%;
+	width: 70%;
 	border-radius: 6px;
 	overflow: hidden;
 }
