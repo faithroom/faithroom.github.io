@@ -35,6 +35,9 @@ $(function () {
 function loadPage(url) {
 	// Determine the base directory for relative paths
 	var baseDir = url.substring(0, url.lastIndexOf('/') + 1);
+	var pageMatch = url.match(/(?:^|\/)([^\/]+)\/index\.html$/i);
+	var pageKey = pageMatch ? pageMatch[1] : url.replace(/\.html$/i, '');
+	document.body.setAttribute('data-trip-page', pageKey);
 
 	fetch(url)
 		.then(function (response) { return response.text(); })
