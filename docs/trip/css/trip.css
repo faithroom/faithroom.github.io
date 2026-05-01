@@ -139,7 +139,7 @@ a img {
 	width: 100%;
 	line-height: 180%;
 	font-size: 14px;
-	color: #1c1c1c;
+	color: #101010;
 }
 
 .main-block-body p {
@@ -152,7 +152,7 @@ a img {
 	border-collapse: collapse;
 	border-spacing: 0;
 	background-color: transparent;
-	color: #1c1c1c;
+	color: #101010;
 	border-radius: 6px;
 	overflow: hidden;
 }
