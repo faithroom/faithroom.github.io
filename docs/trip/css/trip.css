@@ -197,13 +197,16 @@ a img {
 }
 
 .main-photo2 img {
+	width: auto;
+	max-width: min(100%, 240px);
+	height: auto;
 	border-radius: 4px;
 	transition: transform 0.25s ease, box-shadow 0.25s ease;
 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 .main-photo2 img:hover {
-	transform: scale(1.03);
+	transform: none;
 	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
@@ -291,7 +294,8 @@ a img {
 	}
 
 	.main-photo2 img {
-		width: 100%;
+		width: auto;
+		max-width: 100%;
 	}
 
 }
