@@ -194,6 +194,8 @@ a img {
 	color: #555;
 	line-height: 130%;
 	vertical-align: top;
+	max-width: 252px;
+	overflow-wrap: break-word;
 }
 
 .main-photo2 img {
